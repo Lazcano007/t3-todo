@@ -19,3 +19,9 @@ model Post {
 
   @@index([name])
 }
+
+model Todo {
+  id        String   @id @default(cuid())
+  text      String
+  createdAt DateTime @default(now())
+}
